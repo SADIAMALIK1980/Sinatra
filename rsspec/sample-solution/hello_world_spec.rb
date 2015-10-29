@@ -1,1 +1,0 @@
-../provided-code/hello_world_spec.rb
