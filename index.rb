@@ -54,16 +54,23 @@ get '/' do
 end
 
 def valid_birthdate(input)
-  if (input.length == 8 && !input.match(/^[0-9]+[0-9]$/).nil?)
-    true
-  else false
+ if(input.length == 8 && !input.match(/^[0-9]+[0-9]$/).nil?)
+    return true
+ else
+    return false
+ end
 end
-  end
 
 post '/' do
 mydob = params[:mydob].gsub("-","")
-birth_path_num = dob_pathnumber(mydob)
+if valid_birthdate(mydob)
+     birth_path_num = dob_pathnumber(mydob)
 redirect "/message/#{birth_path_num}"
+    else
+      @error = "Sorry, your input wasn't valid. Try again!"  
+      erb :form 
+      
+    end
 end
 
 get '/message/:birth_path_num' do

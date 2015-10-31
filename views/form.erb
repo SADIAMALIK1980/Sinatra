@@ -1,8 +1,11 @@
+<% if !@error.nil? %>
+  <p class="text-danger"><%= @error %></p>
+<% end %>
 <div class="row"><div class="col-md-4">
 </div>
 <form class="col-md-4" action="/" method="POST">
 <div class="form-group"><label for="mydob">Enter your birthdate(mmddyyyy):</label>	
-<input class="form-control" name="mydob" type="date" /></div>
+<input class="form-control" name="mydob" type="text" /></div>
 <input class="btn btn-default" type="submit" />
 </form> 
 </div>
