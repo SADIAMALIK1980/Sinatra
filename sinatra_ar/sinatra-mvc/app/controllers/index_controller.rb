@@ -1,8 +1,8 @@
 require 'sinatra'
 
-def dob_pathnumber(birthdate)
+def dob_pathnumber(my_dob)
 
-number = birthdate[0].to_i + birthdate[1].to_i + birthdate[2].to_i + birthdate[3].to_i + birthdate[4].to_i + birthdate[5].to_i + birthdate[6].to_i
+number = my_dob[0].to_i + my_dob[1].to_i + my_dob[2].to_i + my_dob[3].to_i + my_dob[4].to_i + my_dob[5].to_i + my_dob[6].to_i
 
 number = number.to_s
 
@@ -43,8 +43,8 @@ end
 
 
 def setup_index_view
-  mydob = params[:birthdate].gsub("-","")
-  @birth_path_num = dob_pathnumber(birthdate)
+  my_dob = params[:mydob].gsub("-","")
+  @birth_path_num = dob_pathnumber(my_dob)
   @message = dob_message(@birth_path_num)
 erb :index
 end
@@ -62,9 +62,9 @@ def valid_birthdate(input)
 end
 
 post '/' do
-mydob = params[:birthdate].gsub("-","")
-if valid_birthdate(birthdate)
-     birth_path_num = dob_pathnumber(birthdate)
+mydob = params[:mydob].gsub("-","")
+if valid_birthdate(mydob)
+     birth_path_num = dob_pathnumber(mydob)
 redirect "/message/#{birth_path_num}"
     else
       @error = "Sorry, your input wasn't valid. Try again!"  
@@ -82,4 +82,3 @@ end
 get '/newpage' do
   erb :newpage
 end
-
