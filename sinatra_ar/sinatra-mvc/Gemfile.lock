@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 7eec87bf99e2b94688b1182979b04e27abf88ac7
+  specs:
+    paperclip (4.3.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -16,9 +27,17 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     builder (3.2.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     diff-lcs (1.2.5)
+    faker (1.4.3)
+      i18n (~> 0.5)
     i18n (0.7.0)
     json (1.8.2)
+    mime-types (2.6.2)
+    mimemagic (0.3.0)
     minitest (5.5.1)
     pg (0.18.1)
     pg (0.18.1-x86-mingw32)
@@ -59,6 +78,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  faker
+  paperclip!
   pg
   rack
   rack-test

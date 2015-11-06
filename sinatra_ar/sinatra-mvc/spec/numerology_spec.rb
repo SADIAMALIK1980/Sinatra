@@ -27,7 +27,7 @@ describe 'Our Numerology App' do
   it "responds to a post to / with a redirect" do
     # This test just checks that a post request is 
     # accepted with a birthdate parameter
-    post("/", { birthdate: '09031994' })
+    post("/", { mydob: '09031994' })
     expect(last_response.redirect?).to eq(true)
   end
 
@@ -44,20 +44,20 @@ describe 'Our Numerology App' do
 
   SpecHelper::NUMEROLOGY.each do |number, details|
     it "returns the correct number for #{number}" do
-      get("/#{details[:birthdate]}")
+      get("/#{details[:mydob]}")
       expect(last_response.body).to match(/#{details[:birth_path_number]}/)
     end
   end
 
   it "displays an error message if the input is too short" do
     mydob = '090319'
-    post("/", { birthdate: birthdate })
+    post("/", { mydob: mydob })
     expect(last_response).to match(/#{'You should enter a valid birthdate in the form of mmddyyyy.'}/)
   end
 
   it "displays an error message if the input is non-numeric" do
     mydob = '12axy3jk'
-    post("/", { birthdate: birthdate })
+    post("/", { mydob: mydob })
     expect(last_response).to match(/#{'You should enter a valid birthdate in the form of mmddyyyy.'}/)
   end  
     
