@@ -1,8 +1,13 @@
 <div class="row"><div class="col-md-4">
-</div><table>
+</div>
+<table>
   <thead>
-    <th class="text-center">Name</th>
-    <th class="text-center">Birthdate</th>   
+    <th class="text-center">Name</th><th></th> 
+    <th class="text-center">Birthdate</th> 
+<th></th> 
+    <th>Edit</th>
+<th></th>
+    <th>Delete</th>
   </thead>
   <tbody>
     <% @people.each do |person| %>
@@ -12,9 +17,21 @@
             <%= "#{person.first_name} #{person.last_name}" %>
           </a>
         </td>
+<td> &nbsp;&nbsp;&nbsp; </td>
         <td>
-          <%= "#{person.birthdate}" %>
+          <%= "#{person.birthdate.strftime("%m-%d-%Y")}" %>
         </td>
+<td> &nbsp;&nbsp;&nbsp; </td>
+       <td>
+            <a href="<%= "/people/#{person.id}/edit" %>"> Edit 
+            </a>
+          </td> <td> &nbsp;&nbsp;&nbsp; </td>
+       <td> 
+            <form action="<%= "/people/#{person.id}" %>" method="post">
+              <input type="hidden" name="_method" value="delete" />
+              <input type="submit" value="Delete" />
+            </form>
+          </td>
       </tr>
     <% end %>
   </tbody>
