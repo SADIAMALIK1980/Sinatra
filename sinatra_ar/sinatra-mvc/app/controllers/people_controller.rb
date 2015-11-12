@@ -4,6 +4,7 @@ get '/people/' do
 end
 
 get '/people/new' do
+    @person = Person.new
     erb :"/people/new"
 end 
 
@@ -35,7 +36,9 @@ put '/people/:id' do
 delete '/people/:id' do
   person = Person.find(params[:id])
   person.delete
+  @error = "The person has been deleted from our database."
   redirect "/people"
+  
 end
 
 get '/people/:id' do
