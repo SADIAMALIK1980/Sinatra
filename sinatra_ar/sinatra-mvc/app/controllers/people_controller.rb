@@ -11,9 +11,11 @@ end
 post '/people' do
   if params[:birthdate].include?("-")
     birthdate = params[:birthdate]
-  else
+  elsif birthdate
     birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
-  end
+else
+  		birthdate = ""
+end
 
   @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
     if @person.valid?
