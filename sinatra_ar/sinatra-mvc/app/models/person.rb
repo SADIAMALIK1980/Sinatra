@@ -1,5 +1,7 @@
 class Person < ActiveRecord::Base
 
+validates_presence_of :birthdate, :first_name, :last_name
+
 def self.dob_pathnumber(mydob)
 
 number = mydob[0].to_i + mydob[1].to_i + mydob[2].to_i + mydob[3].to_i + mydob[4].to_i + mydob[5].to_i + mydob[6].to_i

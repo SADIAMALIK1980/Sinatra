@@ -24,10 +24,10 @@
           		</td> 
 			<td> &nbsp;&nbsp;&nbsp; </td>
        		<td> 
-            		<form action="<%= "/people/#{person.id}" %>" method="post">
+            		<div class="delete"><form action="<%= "/people/#{person.id}" %>" method="post">
               			<input type="hidden" name="_method" value="delete" />
               			<input type="submit" value="Delete" />
-            		</form>
+            		</form></div>
           		</td>
       	</tr>
     		<% end %>

@@ -1,3 +1,13 @@
+.delete input[type="submit"],
+.delete input[type="button"]
+{
+    background: #E5ACB6;
+    border: 1px solid #e8eeef;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+
 .new-person {
     max-width: 500px;
     padding: 10px 20px;
