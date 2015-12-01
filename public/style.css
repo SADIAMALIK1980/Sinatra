@@ -1,0 +1,117 @@
+body {
+	background:#f8f8f8;
+	background:url('images/tiles-02.png');
+	font-family:'montserrat', arial;
+}
+
+.word {
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto 10px; 
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+.word fieldset{
+    border: none;
+}
+.word legend {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:#1abc9c;
+}
+.word label {
+    display: block;
+    margin-bottom: 8px;
+}
+.word input[type="text"],
+.word textarea,
+.word select {
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+.word input[type="text"]:focus,
+.word textarea:focus,
+.word select:focus{
+    background: #d2d9dd;
+}
+.word select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+
+.word input[type="submit"],
+.word input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.word input[type="submit"]:hover,
+.word input[type="button"]:hover
+{
+    background: #109177;
+}
+
+.anagram {
+    max-width: 500px;
+    height: 500px;
+    background: #e8eeef; 
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; 
+    border-radius: 8px;
+}
+
+.anagram legend {
+    font-size: 2em;
+    color:#1abc9c;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.anagram .header {
+    color:#000000;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+.anagram li
+{ 
+  
+  text-align: center;
+  list-style: none 
+}
+
