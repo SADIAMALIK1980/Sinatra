@@ -21,14 +21,11 @@ GEM
     json (1.8.2)
     minitest (5.5.1)
     pg (0.18.1)
-    puma (2.11.0)
-      rack (>= 1.1, < 2.0)
-    rack (1.6.0)
+    pg (0.18.1-x86-mingw32)
+    puma (2.15.3)
+    rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    rack-test (0.6.3)
-      rack (>= 1.0)
-    rake (10.4.2)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -56,14 +53,15 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
-  activerecord
   pg
   puma
   rack
-  rack-test
-  rake
   rspec
   sinatra
   sinatra-activerecord
+
+BUNDLED WITH
+   1.10.6
