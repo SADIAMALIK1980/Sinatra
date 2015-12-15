@@ -115,3 +115,10 @@ body {
   list-style: none 
 }
 
+.error {
+    font-size: 2em;
+    text-align: center;
+    color:#ff2a1a;
+    margin-bottom: 10px;
+}
+
