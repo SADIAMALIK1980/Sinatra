@@ -23,11 +23,9 @@ def distinct_letters?(input)
 end
 
 def valid_input?(input)
-    if three_letters?(input) && distinct_letters?(input)
-      true
-    else
-      false
-    end
+    if input.length > 3  or distinct_letters?(input) == false
+      raise Exception.new("The word should be three letter or less. No repeated letters!")
+end
 end 
 
 get '/anagrams/:word' do
@@ -38,12 +36,11 @@ end
 
 post '/' do
   @word = params[:word]
-if valid_input?(@word)
-  redirect "/anagrams/#{@word}"
-else
-  # create an @error variable with an error message
-  # then render the index page again
-    @error = "The word should be three letter or less. No repeated letters!"
-erb :index
+	begin 
+		valid_input?(@word)
+  		redirect "/anagrams/#{@word}"
+ 	rescue Exception => error
+      	@error = error.message 
+		erb :index
     end
 end

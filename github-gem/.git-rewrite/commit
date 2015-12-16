@@ -1,6 +1,0 @@
-tree 9ba8cc6b28e336e54845ff817c8b3c7863f2deca
-parent 4858b97f2dee6ae335a986053d8a7d8ea92732db
-author Kevin Ballard <kevin@sb.org> 1210912029 -0400
-committer Kevin Ballard <kevin@sb.org> 1210912029 -0400
-
-Parse options before running commands in ui_spec

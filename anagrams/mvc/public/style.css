@@ -90,12 +90,12 @@ body {
     right: 0;
     margin: auto; 
     border-radius: 8px;
+    text-align: center;
 }
 
 .anagram legend {
     font-size: 2em;
     color:#1abc9c;
-    text-align: center;
     text-transform: uppercase;
     margin-bottom: 8px;
 }
@@ -103,15 +103,12 @@ body {
 .anagram .header {
     color:#000000;
     display: inline-block;
-    text-align: center;
     text-transform: capitalize;
 }
 
 
 .anagram li
 { 
-  
-  text-align: center;
   list-style: none 
 }
 
