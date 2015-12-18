@@ -1,0 +1,20 @@
+<div class="text-center"><h1>Words</h1>
+  <table class="table table-striped">
+    <thead>
+      <th class="text-center"><h4>Text</h4></th>
+      <th class="text-center"><h4>Letters</h4></th>    
+    </thead>
+    <tbody>
+      <% @word.each do |item| %>
+        <tr>
+          <td>
+		<a href="<%= "/words/#{item.id}" %>">
+			<%= item.text %>
+  		</a>
+		</td>
+          <td><%= item.letters %></td>        
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

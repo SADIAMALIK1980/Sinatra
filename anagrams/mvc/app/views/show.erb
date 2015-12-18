@@ -1,8 +1,11 @@
-<div class='anagram'><legend><h1><span class="header">Anagrams for</span><%= "#{@word}" %></h1></legend>
+<div class='anagram'><legend><h1><span class="header">Anagrams for</span>
+<br><%= "#{@word}" %></h1></legend>
 <ul>
-  <% @anagrams.each do |item| %>
-<li><%= item %></li>
-  <% end %>
+	<% if !@anagrams.nil? %>
+  		<% @anagrams.each do |item| %>
+    			<li><%= item.text %></li>
+   		<% end %>	
+ 	<% end %>
 </ul>
 </div>
 
