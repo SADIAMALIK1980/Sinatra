@@ -1,6 +1,10 @@
 class Word < ActiveRecord::Base
 
-before_create :add_letters
+validates_presence_of :text
+
+validates_uniqueness_of :text, :message => '%{value} already exists in database'
+
+before_save :add_letters
 
   def add_letters
       characters = self.text.chars

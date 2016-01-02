@@ -1,11 +1,13 @@
-<div class='anagram'><legend><h1><span class="header">Anagrams for</span>
+<div class="text-center"><div class='anagram'><legend><h1><span class="header">Anagrams for</span>
 <br><%= "#{@word}" %></h1></legend>
 <ul>
-	<% if !@anagrams.nil? %>
+	<% if @anagrams.count > 1 %>
   		<% @anagrams.each do |item| %>
     			<li><%= item.text %></li>
-   		<% end %>	
+   		<% end %>
+      <% else %>
+	 <p class='error'>Sorry, no anagrams for <%= "#{@word}" %>. </p>
  	<% end %>
 </ul>
-</div>
+</div></div>
 

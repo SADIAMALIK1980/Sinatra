@@ -2,7 +2,9 @@ body {
 	background:#f8f8f8;
 	background:url('images/tiles-02.png');
 	font-family:'montserrat', arial;
+	padding-bottom: 70px; 
 }
+
 
 .word {
     max-width: 500px;
@@ -140,7 +142,6 @@ body {
     margin-bottom: 8px;
 }
 .new-word input[type="text"],
-.new-word input[type="date"],
 .new-word textarea,
 .new-word select {
     background: rgba(255,255,255,.1);
@@ -162,7 +163,6 @@ body {
     
 }
 .new-word input[type="text"]:focus,
-.new-word input[type="date"]:focus,
 .new-word textarea:focus,
 .new-word select:focus{
     background: #d2d9dd;
@@ -207,3 +207,94 @@ body {
 {
     background: #109177;
 }
+
+.edit-word {
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+.edit-word fieldset{
+    border: none;
+}
+.edit-word legend {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.edit-word label {
+    display: block;
+    margin-bottom: 8px;
+}
+.edit-word input[type="text"],
+.edit-word textarea,
+.edit-word select {
+    background: rgba(255,255,255,0.17);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #FFF2F4;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+.edit-word input[type="text"]:focus,
+.edit-word textarea:focus,
+.edit-word select:focus{
+    background: #FFDFE5;
+}
+.edit-word select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.edit-word .number {
+    background: #E5ACB6;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.edit-word input[type="submit"],
+.edit-word input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #E5ACB6;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #CC99A2;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.edit-word input[type="submit"]:hover,
+.edit-word input[type="button"]:hover
+{
+    background: #CC99A2;
+}
+
+ 
+}
+
